@@ -1,9 +1,14 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>demo</title>
-        <script src="./dist/bundle.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue - Learn</title>
+  </head>
     <body>
-        <h1>测试Vue</h1>
+      <h4> Vue - Learn </h4>
+      <div id="app-5">
+          <p>{{ message }}</p>
+          <button v-on:click="reverseMessage">逆转消息</button>
+      </div>
     </body>
 </html>
