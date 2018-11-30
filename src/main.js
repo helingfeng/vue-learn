@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 // var app5 = new Vue({
-//     el: '#app-5',
+//     el: '#app',
 //     data: {
 //       message: 'Hello Vue.js!'
 //     },
@@ -13,21 +13,46 @@ import Vue from 'vue';
 // });
 
 
+// var vm = new Vue({
+//   el: '#app',
+//   data: {
+//     message: 'Hello'
+//   },
+//   computed: {
+//     // 计算属性的 getter
+//     reversedMessage: function () {
+//       // `this` 指向 vm 实例
+//       return this.message.split('').reverse().join('')
+//     }
+//   },
+//   methods: {
+//     reverseMessageHandle: function () {
+//       this.message = this.message.split('').reverse().join('')
+//     }
+//   }
+// })
+
+// Vue 包含一组观察数组的变异方法，所以它们也将会触发视图更新。这些方法如下：
+// push()
+// pop()
+// shift()
+// unshift()
+// splice()
+// sort()
+// reverse()
+
 var vm = new Vue({
-  el: '#app-5',
+  el: '#app',
   data: {
-    message: 'Hello'
-  },
-  computed: {
-    // 计算属性的 getter
-    reversedMessage: function () {
-      // `this` 指向 vm 实例
-      return this.message.split('').reverse().join('')
-    }
+    items: ['a', 'b', 'c']
   },
   methods: {
-    reverseMessageHandle: function () {
-      this.message = this.message.split('').reverse().join('')
+    changeValue: function () {
+      // this.items[1] = 'x';
+      Vue.set(this.items, 1, 'x');
     }
   }
 })
+
+// vm.items[1] = 'x' // 不是响应性的
+// vm.items.length = 2 // 不是响应性的
