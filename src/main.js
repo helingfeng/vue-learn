@@ -1,4 +1,7 @@
 import Vue from 'vue';
+import {VueLoading} from 'vue-loading-template'
+
+// Vue.use(VueLoading, /** options **/)
 
 // var app5 = new Vue({
 //     el: '#app',
@@ -51,6 +54,9 @@ var vm = new Vue({
       // this.items[1] = 'x';
       Vue.set(this.items, 1, 'x');
     }
+  },
+  components:{
+    VueLoading
   }
 })
 
